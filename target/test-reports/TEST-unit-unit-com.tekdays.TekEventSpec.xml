@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="ematheson-lenovo" name="com.tekdays.TekEventSpec" tests="1" time="0.677" timestamp="2014-06-18T20:30:14">
-  <properties />
-  <testcase classname="com.tekdays.TekEventSpec" name="test toString" time="0.646" />
-  <system-out><![CDATA[--Output from test toString--
-]]></system-out>
-  <system-err><![CDATA[--Output from test toString--
-]]></system-err>
-</testsuite>
