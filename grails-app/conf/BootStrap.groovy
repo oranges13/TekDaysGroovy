@@ -2,9 +2,25 @@ import com.tekdays.*
 class BootStrap {
 
     def init = { servletContext ->
+		new TekUser(
+			fullName: 'John Doe',
+			userName: 'jdoe',
+			password: 't0ps3cr3t',
+			email: 'jdoe@johnsgroovyshop.com',
+			website: 'jdoe.blogspot.com',
+			bio: '''John is a silly goose. Conveniently reintermediate mission-critical imperatives via client-focused niches. Assertively orchestrate professional methodologies via principle-centered e-tailers. Phosfluorescently pontificate team driven data through plug-and-play collaboration and idea-sharing. Quickly generate resource sucking internal or "organic" sources after distinctive human capital. Phosfluorescently negotiate efficient ideas via vertical functionalities.'''
+			).save()
+		new TekUser(
+			fullName: 'David Tractor',
+			userName: 'tractorman',
+			password: 'vr00mvr00m',
+			email: 'dtractor@vroom.com',
+			website: 'www.vroom.com',
+			bio: '''David likes to go fast! Interactively supply user-centric paradigms without proactive networks. Efficiently morph cross-platform niches via revolutionary interfaces. Rapidiously deploy holistic manufactured products with worldwide process improvements. Efficiently exploit B2B ROI through virtual markets. Phosfluorescently conceptualize multimedia based imperatives for next-generation technology.'''
+			).save()
 		def event1 = new TekEvent(
 				name: 'Groovy Beginners Camp',
-				organizer: 'Jean Luc Picard',
+				organizer: TekUser.findByUserName('jdoe'),
 				venue: 'TBD',
 				city: 'Marathon, FL',
 				startDate: new Date("7/8/2014"),
@@ -22,7 +38,7 @@ Seamlessly repurpose out-of-the-box web-readiness for cross-media outsourcing.''
 		}
 		def event2 = new TekEvent(
 				name: 'Learn some Code! Camp',
-				organizer: 'Mary Davis',
+				organizer: TekUser.findByUserName('tractorman'),
 				venue: 'Academy Hall',
 				city: 'Chicago, IL',
 				startDate: new Date("7/29/2014"),
@@ -38,6 +54,24 @@ Seamlessly transition efficient services without revolutionary mindshare.'''
 				println "An error occurred with event2: ${error}"
 			}
 		}
+		def g1 = TekEvent.findByName('Groovy Beginners Camp')
+		g1.addToVolunteers(new TekUser(
+				fullName: 'Sarah Jones',
+				userName: 'sjones',
+				password: 'letmein',
+				email: 'sjones@something.com',
+				website: 'www.bloghere.com',
+				bio: 'Web Designer and Grails afficionado.'
+			))
+		g1.addToVolunteers(new TekUser(
+				fullName: 'George Lopez',
+				userName: 'GogoLopo',
+				password: '12345',
+				email: 'Cancan123@oodles.com',
+				website: 'www.website.com',
+				bio: 'Software developer extraordinaire!'
+			))
+		g1.save()
     }
     def destroy = {
     }

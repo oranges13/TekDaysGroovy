@@ -1,5 +1,5 @@
 Testsuite: com.tekdays.TekEventSpec
-Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.571 sec
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.677 sec
 ------------- Standard Output ---------------
 --Output from test toString--
 ------------- ---------------- ---------------
@@ -7,4 +7,4 @@ Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.571 sec
 --Output from test toString--
 ------------- ---------------- ---------------
 
-Testcase: test toString took 0.541 sec
+Testcase: test toString took 0.646 sec
