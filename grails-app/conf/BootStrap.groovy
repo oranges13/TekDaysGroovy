@@ -71,7 +71,36 @@ Seamlessly transition efficient services without revolutionary mindshare.'''
 				website: 'www.website.com',
 				bio: 'Software developer extraordinaire!'
 			))
+                g1.addToRespondents('ben@grailsmail.com')
+                g1.addToRespondents('orange@cheese.com')
+                g1.addToRespondents('samwel@cabinets.org')
 		g1.save()
+                
+        def s1 = new Sponsor(
+            name: 'Contegix', 
+            website: 'http://contegix.com', 
+            description: 'Beyond Managed Hosting for your Enterprise',
+        ).save()
+        
+        def s2 = new Sponsor(
+            name: 'Object Computing Incorporated',
+            website: 'http://objects.com',
+            description: 'An 00 software engineering company',
+        ).save()
+        
+        def sp1 = new Sponsorship(
+            event: event1,
+            sponsor: s1,
+            contributionType: "Other",
+            description: "Cool T-shirts"
+        ).save()
+        
+        def sp2 = new Sponsorship(
+            event: event2,
+            sponsor: s2,
+            contributionType: 'Venue',
+            description: 'Will be paying for the Moscone'
+        ).save()
     }
     def destroy = {
     }
