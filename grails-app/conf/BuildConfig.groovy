@@ -59,12 +59,19 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.0.3"
         compile ':cache:1.1.2'
+        
+        // Heroku
+        compile ':heroku:1.0.1'
+        compile ':cloud-support:1.0.8'
 
         // plugins needed at runtime but not for compilation
         runtime ":hibernate:3.6.10.13" // or ":hibernate4:4.3.5.1"
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.0.2"
         runtime ":resources:1.2.7"
+        
+        // Heroku PGSQL dependency
+        runtime 'postgresql:postgresql:8.4-702.jdbc3'
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"
