@@ -71,7 +71,7 @@ grails.project.dependency.resolution = {
         runtime ":resources:1.2.7"
         
         // Heroku PGSQL dependency
-        runtime 'postgresql:postgresql:8.4-702.jdbc3'
+        runtime 'org.postgresql:postgresql:9.3-1102-jdbc3'
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"
