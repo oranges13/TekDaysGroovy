@@ -50,6 +50,7 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.27'
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
+        runtime 'postgresql:postgresql:8.4-702.jdbc3'
     }
 
     plugins {
@@ -69,9 +70,7 @@ grails.project.dependency.resolution = {
         runtime ":database-migration:1.4.0"
         runtime ":jquery:1.11.0.2"
         runtime ":resources:1.2.7"
-        
-        // Heroku PGSQL dependency
-        runtime 'org.postgresql:postgresql:9.3-1102-jdbc3'
+    
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"
