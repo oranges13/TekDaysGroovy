@@ -7,6 +7,7 @@ class Task {
     TekUser assignedTo
     Date dueDate
     TekEvent event
+	Boolean completed
     
     String toString() {
         title
@@ -17,6 +18,7 @@ class Task {
         notes blank: false, nullable: true, maxSize: 5000
         assignedTo nullable: false
         dueDate nullable: false
+		completed nullable: true
     }
     
     static belongsTo = TekEvent

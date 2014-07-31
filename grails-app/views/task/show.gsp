@@ -67,7 +67,16 @@
 					
 				</li>
 				</g:if>
-			
+				
+				<g:if test="${tekEventInstance?.completed}">
+				<li class="fieldcontain">
+					<span id="completed-label" class="property-label"><g:message code="tekEvent.completed.label" default="Completed" /></span>
+					
+						<span class="property-value" aria-labelledby="completed-label">
+							<g:formatBoolean boolean="${taskInstance?.completed}" true="Yes" false="No" />
+						</span>
+					
+				</li>
 			</ol>
 			<g:form url="[resource:taskInstance, action:'delete']" method="DELETE">
 				<fieldset class="buttons">

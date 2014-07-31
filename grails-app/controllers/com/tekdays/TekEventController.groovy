@@ -8,7 +8,8 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class TekEventController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    def taskService
+	static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -36,6 +37,7 @@ class TekEventController {
         }
 
         tekEventInstance.save flush:true
+		taskService.addDefaultTasks(tekEventInstance)
 
         request.withFormat {
             form multipartForm {

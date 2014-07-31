@@ -8,9 +8,9 @@ class Sponsorship {
     String description
     String notes
     
-    String toString() {
-        "$event brought to you by $sponsor"
-    }
+//    String toString() {
+//        "$event brought to you by $sponsor"
+//    }
 
     static constraints = {
         event nullable: false
